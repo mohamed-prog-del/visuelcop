@@ -1,0 +1,209 @@
+@import url(reset.css);
+
+.header,
+.nav,
+.fa {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header {
+  background-color: #ffc107;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -0.2rem;
+  top: 0;
+  /* position: fixed;
+  width: 100%;
+  z-index: 1000; */
+}
+
+.link__logo {
+  flex: 1;
+}
+
+.title__h1 {
+  color: black;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  flex: 5;
+  text-align: center;
+}
+
+.link__head {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.head__link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 5px;
+  margin-top: 0.5rem;
+}
+
+.nav {
+  background-color: rgb(37, 36, 36);
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between; /* Change to space-between */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Add padding for spacing */
+  /* border-radius: 0.5rem;
+  margin-top: 0.5rem; */
+  /* position: fixed;
+  width: 100%;
+  z-index: 1000; */
+  top: 200px;
+}
+
+.nav__link {
+  text-decoration: none; /* Pas de soulignement sur le texte */
+  color: #fff; /* Couleur du texte blanc */
+}
+
+.nav__separator {
+  color: white; /* Couleur blanche */
+}
+
+.left {
+  order: 1; /* S'assurer que la section gauche est la première */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  gap: 20px; /* Espacement de 20 pixels entre les éléments */
+  margin-left: 0.5rem; /* Marge à gauche de 0,5 rem */
+}
+
+.right {
+  order: 2; /* S'assurer que la section droite est la deuxième */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  align-items: center; /* Centrer les éléments verticalement */
+  margin-right: 0.5rem; /* Marge à droite de 0,5 rem */
+  /* margin-top: 1rem; /* Marge en haut de 1 rem */
+}
+
+.nav__link:hover {
+  text-decoration: underline; /* Souligner le texte au survol */
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Disposer les éléments en colonne */
+    align-items: flex-start; /* Aligner les éléments au début (gauche) */
+  }
+
+  .left,
+  .right {
+    order: unset; /* Réinitialiser l'ordre des éléments */
+    margin: 0.5rem 0; /* Ajouter une marge verticale de 0,5 rem */
+  }
+
+  .nav__link {
+    margin: 0.5rem 0; /* Ajouter une marge verticale de 0,5 rem */
+  }
+}
+
+.btn {
+  color: #2f4f4f; /* Couleur du texte */
+  border: 1px solid #2f4f4f; /* Bordure d'un pixel de couleur */
+  background-color: transparent; /* Fond transparent */
+  border-radius: 0.5rem; /* Bordure arrondie de 0,5 rem */
+  margin-top: 0.5rem; /* Marge supérieure de 0,5 rem */
+  margin-right: 0.2rem; /* Marge droite de 0,2 rem */
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  color: #fff; /* Couleur du texte au survol (blanc) */
+  background-color: #2f4f4f; /* Couleur de fond au survol */
+  border-color: #2f4f4f; /* Couleur de bordure au survol */
+}
+
+
+.fa {
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed;
+  width: 100%;
+  z-index: 1000; */
+  top: 250px;
+  background-color: #fff;
+}
+
+.ff {
+  /* padding-right: 100rem; */
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+/* .gallery{
+    background-color: #fff;
+    padding: 0.5rem; /* 8px */
+/* width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+}  */
+
+.gallery {
+  background-color: #fff;
+  /* display: grid;
+  grid-template-columns: repeat(3,1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  /*gap: 10px; Espace entre les photos */
+  justify-content: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 300px;
+}
+
+.photo {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(33.333% - 20px); /* Trois photos par ligne */
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.text {
+  flex: 1;
+  border: 1px solid;
+  border-radius: 1rem;
+  color: #2f4f4f;
+  line-height: 1.6; /* 1.5 fois la taille de la police */
+}
+
+.picture {
+  border-radius: 10px;
+  box-shadow: 0px 10px 13px -7px #000000;
+  height: 150px;
+  width: 150px;
+  margin: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.picture:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  background-color: rgb(37, 36, 36);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  gap: 3px;
+}

@@ -1,0 +1,76 @@
+@import url(reset.css);
+
+.header{
+    background-color: #ffc107;
+
+}
+
+.title__h1{
+color: black;
+font-size: xx-large;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.head__link{
+    color: black;
+    text-decoration: none;
+}
+
+.nav{
+    background-color:rgb(37, 36, 36);
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 1rem;
+
+}
+
+.conex{
+    margin-top: 1rem;
+}
+
+.btn{
+    color: #2f4f4f;
+    border: 1px solid #2f4f4f;
+    background-color: transparent;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #2f4f4f;
+    border-color: #2f4f4f;
+}
+
+.fa{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ff{
+    /* padding-right: 100rem; */
+    margin-right: 0.5rem;
+    width: 100%;
+
+}
+
+
+.footer{
+    background-color: rgb(37, 36, 36);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+
+}
+
+.nav__footer{
+display: flex;
+gap: 3px;
+}

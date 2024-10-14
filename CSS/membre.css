@@ -1,0 +1,207 @@
+@import url(reset.css);
+
+.header {
+  background-color: #ffc107; /* Couleur d'arrière-plan */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  align-items: center; /* Centrer les éléments verticalement */
+  margin-bottom: -0.2rem; /* Marge inférieure négative pour ajustement */
+}
+
+.link__logo {
+  flex: 1; /* Permet à l'élément de grandir pour remplir l'espace disponible */
+}
+
+.title__h1 {
+  color: black; /* Couleur du texte noir */
+  font-size: xx-large; /* Taille de police très grande */
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; /* Famille de polices utilisées */
+  flex: 5; /* L'élément prendra 5 parts de l'espace disponible */
+  text-align: center; /* Aligner le texte au centre */
+}
+
+.link__head {
+  flex: 1; /* Permet à l'élément de prendre toute la largeur disponible */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  flex-direction: column; /* Disposer les éléments en colonne */
+  align-items: center; /* Centrer les éléments horizontalement */
+  padding: 5px; /* Ajouter un espacement de 5 pixels autour des éléments */
+}
+
+.head__link {
+  color: black; /* Couleur du texte noir */
+  text-decoration: none; /* Pas de soulignement sur le texte */
+  margin-bottom: 5px; /* Marge inférieure de 5 pixels */
+  margin-top: 0.5rem; /* Marge supérieure de 0,5 rem */
+}
+
+.nav {
+  background-color: rgb(37, 36, 36); /* Couleur d'arrière-plan sombre */
+  color: white; /* Couleur du texte blanc */
+  height: 50px; /* Hauteur de 50 pixels */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: space-between; /* Changer pour un espacement égal entre les éléments */
+  align-items: center; /* Centrer les éléments verticalement */
+  padding: 10px; /* Ajouter de l'espacement autour des éléments */
+}
+
+.left {
+  order: 1; /* S'assurer que la section gauche est la première */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  gap: 20px; /* Espacement de 20 pixels entre les éléments */
+  margin-left: 0.5rem; /* Marge à gauche de 0,5 rem */
+}
+
+.nav__link {
+  text-decoration: none; /* Pas de soulignement sur le texte */
+  color: #fff; /* Couleur du texte blanc */
+}
+
+.nav__link:hover {
+  text-decoration: underline; /* Souligner le texte au survol */
+}
+
+.nav__separator {
+  color: white; /* Couleur blanche */
+}
+
+.right {
+  order: 2; /* S'assurer que la section droite est la deuxième */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  align-items: center; /* Centrer les éléments verticalement */
+  margin-right: 0.5rem; /* Marge à droite de 0,5 rem */
+  /* margin-top: 1rem; /* Marge en haut de 1 rem */
+}
+
+.fa {
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: space-between; /* Espacement égal entre les éléments */
+  /* position: fixed; /* Positionnement fixe */
+  /* width: 100%; /* Largeur de 100% */
+  /* z-index: 1000; /* Index de superposition */
+  top: 250px; /* Position supérieure de 250 pixels */
+  background-color: #fff; /* Couleur d'arrière-plan blanche */
+}
+
+.ff {
+  /* padding-right: 100rem; /* Espacement intérieur à droite */
+  margin-top: 0.5rem; /* Marge supérieure de 0,5 rem */
+  margin-right: 0.5rem; /* Marge droite de 0,5 rem */
+  margin-left: 0.5rem; /* Marge gauche de 0,5 rem */
+  width: 100%; /* Largeur de 100% */
+  border-radius: 0.5rem; /* Bordure arrondie de 0,5 rem */
+}
+
+/*******************   RWD  ******************/
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Disposer les éléments en colonne */
+    align-items: flex-start; /* Aligner les éléments au début (gauche) */
+  }
+
+  .left,
+  .right {
+    order: unset; /* Réinitialiser l'ordre des éléments */
+    margin: 0.5rem 0; /* Ajouter une marge verticale de 0,5 rem */
+  }
+
+  .nav__link {
+    margin: 0.5rem 0; /* Ajouter une marge verticale de 0,5 rem */
+  }
+}
+
+/*******************   RWD  ******************/
+
+.btn {
+  color: #2f4f4f; /* Couleur du texte */
+  border: 1px solid #2f4f4f; /* Bordure d'un pixel de couleur */
+  background-color: transparent; /* Fond transparent */
+  border-radius: 0.5rem; /* Bordure arrondie de 0,5 rem */
+  margin-top: 0.5rem; /* Marge supérieure de 0,5 rem */
+  margin-right: 0.2rem; /* Marge droite de 0,2 rem */
+  margin-bottom: 0.5rem;
+}
+
+.btn:hover {
+  color: #fff; /* Couleur du texte au survol (blanc) */
+  background-color: #2f4f4f; /* Couleur de fond au survol */
+  border-color: #2f4f4f; /* Couleur de bordure au survol */
+}
+
+/* .gallery {
+      background-color: #fff; * Couleur d'arrière-plan blanche *
+      padding: 0.5rem; * 8px * * Espacement intérieur de 0,5 rem *
+      * width: 30%; * Largeur de 30% *
+      * box-sizing: border-box; /* Calcul de la boîte *
+      * display: flex; /* Utiliser un modèle de mise en page flexible *
+      * flex-wrap: wrap; * Les éléments vont à la ligne *
+      * column-gap: 100px; / Espacement de 100 pixels entre les colonnes *
+  } */
+
+.photo {
+  display: flex;
+  flex: 1;
+  align-items: center; /* Centrer les éléments verticalement */
+  text-align: center; /* Aligner le texte au centre */
+}
+
+.picture {
+  border-radius: 10px; /* Bordure arrondie de 10 pixels */
+  box-shadow: 0px 10px 13px -7px #000000; /* Ombre portée */
+  height: 150px; /* Hauteur de 150 pixels */
+  width: 150px; /* Largeur de 150 pixels */
+  margin: 2rem; /* Marge de 2 rem */
+  transition: transform 0.5s ease; /* Transition pour l'effet de transformation */
+}
+.picture:hover {
+  transform: scale(1.2); /* Agrandir l'image au survol */
+}
+
+.text {
+  display: flex;
+  flex: 1; /* L'élément prend toute la largeur disponible */
+  border: 1px solid; /* Bordure d'un pixel, style solide */
+  border-radius: 1rem; /* Bordure arrondie de 1 rem */
+  color: #2f4f4f; /* Couleur du texte */
+  line-height: 1.6; /* Hauteur de ligne de 1,6 fois la taille de la police */
+}
+
+.contact label,
+.contact input,
+.contact textarea,
+.contact button {
+  margin-bottom: 1rem;
+  width: 100%; /*largeur */
+}
+
+.photo,
+.contact,
+.media {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(33.333% - 20px); /* Trois photos par ligne */
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.video {
+  padding-top: 1rem; /* Ajouter du padding en haut */
+  padding-bottom: 1rem; /* Ajouter du padding en bas */
+  border: none; /* équivalent de frameborder="0" */
+  width: 400px; /* largeur */
+  height: 300px; /* hauteur */
+}
+
+.footer {
+  background-color: rgb(37, 36, 36); /* Couleur d'arrière-plan sombre */
+  padding: 10px; /* Espacement intérieur de 10 pixels */
+  display: flex; /* Utiliser un modèle de mise en page flexible */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  text-decoration: none; /* Pas de soulignement sur le texte */
+  color: white; /* Couleur du texte blanc */
+  gap: 3px; /* Espacement de 3 pixels entre les éléments */
+}
